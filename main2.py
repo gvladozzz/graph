@@ -7,7 +7,14 @@ q = client.query(
     6d and time <= now() GROUP BY time(10m)''')
 d = {}
 for i in q.raw['series'][0]['values']:
-    d[i[0][:10]] = 0
+    d[i[0][:10]] = []
+for i in q.raw['series'][0]['values']:
+    d[i[0][:10]].append(i[1])
+for i in d:
+    # d[i] = sum(d[i])/len(d[i])
+    print(d[i])
+    # print(sum(d[i]))
+
 
 print(d)
 
