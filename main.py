@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 import matplotlib
-import tkinter
 import numpy as np
 import datetime as dt
 import requests
 import json
+import main2
 
-temp_list = list(range(7))
+temp_list = main2.temp
 
 # print(int(dt.datetime.now().strftime('%d')))
 # print(int((dt.datetime.now() + dt.timedelta(days=7)).strftime('%d')))
